@@ -8,6 +8,3 @@ async function generateText(prompt: string) {
     const result = await model.generateContent("Given the following info, create a checklist. Only respond in checklist form." + prompt + "");
     return result.response.text();
 }
-
-
-
