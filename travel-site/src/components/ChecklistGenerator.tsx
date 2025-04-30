@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize Gemini
-const genAI = new GoogleGenerativeAI("YOUR_API_KEY_HERE");
+const genAI = new GoogleGenerativeAI("AIzaSyB79XSfhjb4sxLr0atszjqTtkl6HHoktj8");
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 // Generation function
@@ -55,7 +55,7 @@ const ChecklistGenerator: React.FC = () => {
         {loading ? "Generating..." : "Generate Checklist"}
       </button>
       {checklist && (
-        <div style={{ marginTop: "2rem", whiteSpace: "pre-wrap", background: "#f9f9f9", padding: "1rem", borderRadius: "8px" }}>
+        <div style={{ marginTop: "2rem", whiteSpace: "pre-wrap", background: "#3f4b49", padding: "1rem", borderRadius: "8px" }}>
           <h3>Generated Checklist:</h3>
           <div>{checklist}</div>
         </div>
