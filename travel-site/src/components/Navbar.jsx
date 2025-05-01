@@ -10,6 +10,7 @@ function Navbar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
+        <Link to="/safety">Travel Safety</Link>
       </ul>
     </nav>
   );
