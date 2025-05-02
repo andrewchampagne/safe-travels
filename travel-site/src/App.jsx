@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 import TravelSafetyChecker from "./components/TravelSafetyChecker";
+import WeatherApp from "./components/weatherapp";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/safety" element={<TravelSafetyChecker />} />
+        <Route path="/weather" element={<WeatherApp />} />
       </Routes>
     </Router>
   );
