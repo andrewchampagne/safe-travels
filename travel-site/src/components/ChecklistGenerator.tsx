@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize Gemini
-const genAI = new GoogleGenerativeAI("AIzaSyB79XSfhjb4sxLr0atszjqTtkl6HHoktj8");
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const GEN_AI = new GoogleGenerativeAI("AIzaSyB79XSfhjb4sxLr0atszjqTtkl6HHoktj8");
+const MODEL = GEN_AI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 // Generation function
 async function generateText(prompt: string): Promise<string> {
-  const result = await model.generateContent(
+  const result = await MODEL.generateContent(
     "Given the following info, create a checklist. Only respond in checklist form. " + prompt
   );
   return result.response.text();

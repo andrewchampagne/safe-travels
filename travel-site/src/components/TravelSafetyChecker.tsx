@@ -12,9 +12,11 @@ export default function TravelSafetyChecker() {
     setError(null);
     setData(null);
     try {
-      const response = await fetch(`/api/country/${countryCode}`);
+      const response = await fetch(`http://localhost:5000/api/country/${countryCode}`);
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: Unable to fetch data.`);
+      }
       const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "Failed to fetch data.");
       setData(result);
     } catch (err: any) {
       setError(err.message || "Something went wrong.");
@@ -22,6 +24,7 @@ export default function TravelSafetyChecker() {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="max-w-xl mx-auto p-6">
