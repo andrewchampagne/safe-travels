@@ -4,6 +4,7 @@
     align-items: center; 
     background-color: #333;
     color: white;
+    width: 100%;
     padding: 1rem 2rem;
     position: fixed; /* Fix the navbar to the top */
     top: 0;           /* Position it at the top */     
@@ -15,6 +16,7 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+   
   }
   
   .nav-links a {

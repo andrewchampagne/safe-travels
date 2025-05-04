@@ -15,13 +15,15 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/safety" element={<TravelSafetyChecker />} />
-        <Route path="/weather" element={<WeatherApp />} />
-      </Routes>
+      <div className="page-wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/safety" element={<TravelSafetyChecker />} />
+          <Route path="/weather" element={<WeatherApp />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
